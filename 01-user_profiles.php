@@ -14,6 +14,9 @@ $faker = Faker\Factory::create('en_PH');
     <title>User Profiles</title>
 </head>
 <body>
-    
+<div class="container mt-5">
+        <h2>User Profiles</h2>
+        
+    </div>
 </body>
 </html>
