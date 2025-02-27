@@ -18,7 +18,14 @@ $faker = Faker\Factory::create();
         <h2>User Accounts</h2>
         <table class="table table-bordered table-striped">
             <thead>
-               
+                <tr>
+                    <th>User ID (UUID)</th>
+                    <th>Full Name</th>
+                    <th>Email Address</th>
+                    <th>Username</th>
+                    <th>Password (SHA-256)</th>
+                    <th>Account Created</th>
+                </tr>
             </thead>
             <tbody>
                 
