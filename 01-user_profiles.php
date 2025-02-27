@@ -1,6 +1,6 @@
 <?php
 
-require '../vendor/autoload.php';
+require './vendor/autoload.php';
 
 $faker = Faker\Factory::create('en_PH');
 
@@ -28,7 +28,18 @@ $faker = Faker\Factory::create('en_PH');
                 </tr>
             </thead>
             <tbody>
-                
+            <?php
+                for ($i = 0; $i < 5; $i++) {
+                    echo "<tr>";
+                    echo "<td>" . $faker->name . "</td>";
+                    echo "<td>" . $faker->email . "</td>";
+                    echo "<td>+63 " . substr($faker->phoneNumber, -9) . "</td>";
+                    echo "<td>" . $faker->address . "</td>";
+                    echo "<td>" . $faker->date('Y-m-d') . "</td>";
+                    echo "<td>" . $faker->jobTitle . "</td>";
+                    echo "</tr>";
+                }
+                ?>
             </tbody>
         </table>
     </div>
