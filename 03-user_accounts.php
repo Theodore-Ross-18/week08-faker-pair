@@ -4,6 +4,11 @@ require './vendor/autoload.php';
 
 $faker = Faker\Factory::create();
 
+function generateUsername($email) {
+    $parts = explode('@', $email);
+    return strtolower($parts[0]);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +33,21 @@ $faker = Faker\Factory::create();
                 </tr>
             </thead>
             <tbody>
-                
+            <?php
+                for ($i = 0; $i < 10; $i++) {
+                    $email = $faker->email;
+                    $password = $faker->password;
+                    
+                    echo "<tr>";
+                    echo "<td>" . $faker->uuid . "</td>";
+                    echo "<td>" . $faker->name . "</td>";
+                    echo "<td>" . $email . "</td>";
+                    echo "<td>" . generateUsername($email) . "</td>";
+                    echo "<td>" . hash('sha256', $password) . "</td>";
+                    echo "<td>" . $faker->dateTimeBetween('-2 years')->format('Y-m-d H:i:s') . "</td>";
+                    echo "</tr>";
+                }
+                ?>
             </tbody>
         </table>
     </div>
