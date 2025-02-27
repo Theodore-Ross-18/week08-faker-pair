@@ -14,6 +14,11 @@ $faker = Faker\Factory::create();
     <title>User Accounts</title>
 </head>
 <body>
-    
+<div class="container mt-5">
+        <h2>User Accounts</h2>
+        <table class="table table-bordered table-striped">
+            
+        </table>
+    </div>
 </body>
 </html>
