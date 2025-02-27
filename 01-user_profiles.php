@@ -16,7 +16,14 @@ $faker = Faker\Factory::create('en_PH');
 <body>
 <div class="container mt-5">
         <h2>User Profiles</h2>
-        
+        <table class="table table-bordered table-striped">
+            <thead>
+                
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
