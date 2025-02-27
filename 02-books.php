@@ -30,6 +30,18 @@ $genres = ['Fiction','Mystery','Science Fiction','Fantasy',
                 </tr>
             </thead>
             <tbody>
+            <?php
+            for ($i = 0; $i < 15; $i++) {
+                echo "<tr>";
+                echo "<td>" . $faker->words(3, true) . "</td>";
+                echo "<td>" . $faker->name  . "</td>";
+                echo "<td>" . $genres[array_rand($genres)] . "</td>";
+                echo "<td>" . $faker->numberBetween(1900, 2024) . "</td>";
+                echo "<td>" . $faker->isbn13 . "</td>";
+                echo "<td>" . $faker->paragraph(1) . "</td>";
+                echo "</tr>";
+            }
+            ?> 
             </tbody>
         </table>
     </div>
